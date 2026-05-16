@@ -43,7 +43,7 @@ Seven reusable patterns, each independently valuable:
 
 1. **`cron-runner/`** — Python LaunchAgent that wakes every 15 min, reads `cron-jobs.json`, and types due slash commands into Nolty's tmux session. Replaces runCLAUDErun. No menu-bar GUI, JSON config, programmable.
 
-2. **TelegramConfig subfolder pattern** — Plugin scope is workspace-root only. Putting the Telegram-enabled settings in a subfolder lets you open the parent in VS Code without spawning a duplicate listener.
+2. **TelegramConfig subfolder pattern** — Plugin scope is workspace-root only. Putting the Telegram-enabled settings in a subfolder lets you open the parent in an IDE without spawning a duplicate listener.
 
 3. **Cron-suffix dispatch routing** — `CLAUDE.md` teaches the agent that when a slash command arrives with `[cron model:X effort:Y]`, it spawns a Task sub-agent (with that model + effort) rather than running in the main thread. Sub-agents inherit `claude-in-chrome` MCP — Chrome-driven crons just work.
 
