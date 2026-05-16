@@ -93,7 +93,13 @@ Depends on: the [`audible-deals`](https://github.com/chauduyphanvu/audible-deals
 
 Daily 6:30am multi-source aggregator: calendar + email + meeting prep (via nested sub-agent) + weather + tasks → single rich Telegram message.
 
-Depends on: gog, weather API (wttr.in is free), a meeting-prep sub-skill (you write or omit).
+Depends on: gog, weather API (`wttr.in` is free), [`examples/meeting-prep`](../examples/meeting-prep/SKILL.md) (also shipped), your task source.
+
+### [`examples/meeting-prep`](../examples/meeting-prep/SKILL.md)
+
+Called by `morning-brief` as a nested sub-agent. Gathers prior notes + email history + company intel + optional CRM lookup → writes a structured prep doc to your notes folder.
+
+Depends on: gog, an Obsidian-style notes folder ([SETUP_OBSIDIAN.md](SETUP_OBSIDIAN.md)), WebFetch, optional CRM API.
 
 ### [`examples/daily-recap`](../examples/daily-recap/SKILL.md)
 

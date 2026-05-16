@@ -172,10 +172,13 @@ nolty/
 **Optional (per skill):**
 
 - **claude-in-chrome configured** — required only for skills that drive the browser (LinkedIn examples). Free; install the Chrome extension, sign into your accounts.
-- **OpenAI API key** — required only for image-generation skills (`chatgpt-image`, used by `nolty-mood`). See [`docs/SETUP_OPENAI.md`](docs/SETUP_OPENAI.md).
+- **OpenAI API key + [`uv`](https://github.com/astral-sh/uv)** — required only for image-generation skills (`chatgpt-image`, used by `nolty-mood`). See [`docs/SETUP_OPENAI.md`](docs/SETUP_OPENAI.md).
+- **An Obsidian-style notes folder** — many examples reference `YOUR_OBSIDIAN_VAULT` (meeting prep, daily-recap, linkedin-monthly-analysis, content-hour). Any directory of markdown files works — see [`docs/SETUP_OBSIDIAN.md`](docs/SETUP_OBSIDIAN.md).
 - **qmd** — local markdown vector search; only the `qmd-reindex` example needs it
 - **`audible-deals`** Python package — only the `audible-deals` example needs it
 - **Perplexity MCP** — only the `home-loan-rate` example needs it
+- **Zapier MCP** — only needed if you adapt `daily-recap` to pull Zoom transcripts via `zoom_get_meeting_summary`
+- **A CRM** — `meeting-prep` example has an optional step for Folk/HubSpot/Apollo/etc. lookup; skip if you don't use one
 
 **Not a dependency:** `claude-in-chrome` is built into Claude Code, not a separate install. OpenClaw is not a dependency (this toolkit replaces it).
 
@@ -203,6 +206,7 @@ A Linux port is ~1 day of work for a contributor. See [`docs/PORTING.md`](docs/P
 - **[Setup: gog](docs/SETUP_GOG.md)** — install + auth the Gmail/Calendar/Sheets CLI
 - **[Setup: claude-in-chrome](docs/SETUP_CLAUDE_IN_CHROME.md)** — configure the Chrome extension for web-driven crons
 - **[Setup: OpenAI API key](docs/SETUP_OPENAI.md)** — for image-generation skills (`chatgpt-image`, `nolty-mood`)
+- **[Setup: Obsidian](docs/SETUP_OBSIDIAN.md)** — optional notes-folder integration for skills that read/write markdown notes
 - **[Recovery](docs/RECOVERY.md)** — the `/nolty-restart` playbook + manual recovery
 - **[Skill reference](docs/SKILL_REFERENCE.md)** — what each shipped skill does, what it depends on
 - **[Customizing Nolty](docs/CUSTOMIZING_NOLTY.md)** — swap the persona, change the brand

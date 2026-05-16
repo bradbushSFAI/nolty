@@ -58,6 +58,11 @@ if ! command -v gog >/dev/null 2>&1; then
     echo "      See docs/SETUP_GOG.md"
 fi
 
+if ! command -v uv >/dev/null 2>&1; then
+    echo "   ⚠️  uv not found. The chatgpt-image skill (image generation) requires it."
+    echo "      Install: curl -LsSf https://astral.sh/uv/install.sh | sh"
+fi
+
 if [ "$missing" -ne "0" ]; then
     echo ""
     echo "❌ Missing prerequisites — fix the above and re-run."

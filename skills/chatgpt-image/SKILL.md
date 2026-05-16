@@ -1,11 +1,17 @@
 ---
 name: chatgpt-image
-description: This skill generates images using OpenAI's gpt-image-2 model. Use when users ask to generate photorealistic images, product photos, diagrams, mockups, brand-safe illustrations, or business graphics. Trigger phrases include "chatgpt image", "openai image", "photorealistic image", "product photo", "diagram", "mockup", "brand-safe image". (user)
+description: This skill generates images using OpenAI's gpt-image-2 model. Use when users ask to generate photorealistic images, product photos, diagrams, mockups, brand-safe illustrations, or business graphics. Trigger phrases include "chatgpt image", "openai image", "photorealistic image", "product photo", "diagram", "mockup", "brand-safe image".
 ---
 
 # ChatGPT Image Generation Skill
 
 Generate images using OpenAI's gpt-image-2 model (released April 2026) — optimized for photorealism, instruction-following, near-perfect text rendering, and business-ready assets. Uses O-series reasoning to research, plan, and self-check before rendering. Supports up to 2K natively and 4K with custom dimensions.
+
+## Setup
+
+Requires `OPENAI_API_KEY` env var and `uv` (Python script runner). See [`docs/SETUP_OPENAI.md`](../../docs/SETUP_OPENAI.md) for the full walkthrough (API key creation, billing, env setup).
+
+For Nolty to reach for this skill when the user asks "generate an image" or "draw X", make sure your `TOOLS.md` has the image-generation row pointing at this skill (the shipped `TOOLS.template.md` already includes it).
 
 ## Model Strengths
 

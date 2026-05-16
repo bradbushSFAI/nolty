@@ -125,7 +125,7 @@ Reply `go` to draft all 3, or tell me what to swap.
 For each pick:
 
 a. **Read source material** — the idea file + any referenced personal story.
-b. **Draft + humanize** — first draft, then run through your humanizer skill if you have one.
+b. **Draft + humanize** — write a first draft. If you've installed a "humanizer" skill that removes AI tells (em-dash overuse, rule-of-three patterns, vague attributions, etc.), run the draft through it. The [`humanizer`](https://github.com/anthropics/claude-code-skills) skill on Anthropic's marketplace is a good starting point. Skip if you don't have one — the draft is still useful, just less polished.
 c. **Format** — apply your platform's formatting (Unicode bold, hashtags, your CTA footer).
 d. **Iterate with the user** — present the formatted draft, get feedback, iterate until approved.
 e. **Save** to `Planned/YYYYMMDD - Title.md` with frontmatter (post_date, check_date, title, pillar, format, hook_style, length).

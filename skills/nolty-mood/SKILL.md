@@ -32,7 +32,7 @@ Example moods + scenes:
 - **Satisfied**: Nolty leaning back in a tiny chair with sunset glow
 - **Sleepy**: Nolty yawning, one eye closed, nightcap perched on top
 
-3. **Invoke the `chatgpt-image` skill** (ships in `skills/chatgpt-image/`; requires `OPENAI_API_KEY` — see `docs/SETUP_OPENAI.md`). Or use `nano-banana` if you prefer Gemini. Save to `/tmp/nolty-mood-$(date +%s).png`.
+3. **Invoke the `chatgpt-image` skill** (ships in `skills/chatgpt-image/`; requires `OPENAI_API_KEY` — see `docs/SETUP_OPENAI.md`). Save to `/tmp/nolty-mood-$(date +%s).png`. (If you prefer Gemini instead of OpenAI, install the `nano-banana` skill from Anthropic's marketplace and adapt — same shape, different API key.)
 
 4. **Send the image to the user** via the `reply` MCP tool with the `files` parameter:
 

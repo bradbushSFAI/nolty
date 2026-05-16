@@ -41,9 +41,11 @@ For each meeting in the next 4 hours with a contact you have history with:
 
 Use the `Task` tool (subagent_type: "general-purpose") to spawn a meeting-prep sub-agent. Prompt:
 
-> "Run the meeting-prep skill for [Contact] at [Company], meeting at [Time]. Pull recent email thread, check Apollo or LinkedIn if available, summarize in 5 bullet points. Save prep doc to YOUR_OBSIDIAN_VAULT/MeetingPreps/[date]-[contact].md. Return only the file path + 1-line summary."
+> "Run the meeting-prep skill at `examples/meeting-prep/SKILL.md` (or `skills/meeting-prep/SKILL.md` if you've copied it into core) for [Contact] at [Company], meeting at [Time]. Save prep doc to YOUR_OBSIDIAN_VAULT/MeetingPreps/[date]-[contact].md. Return only the file path + 1-line summary."
 
 Don't inline the meeting-prep logic in the morning-brief sub-agent — keeps context small. The nested sub-agent gets fresh context.
+
+The meeting-prep skill itself ships in `examples/meeting-prep/SKILL.md`. If you haven't enabled it, either skip this step or set up a stub (write a one-line prep doc per meeting that just says "prep manually").
 
 ### STEP 4 — Tasks for today
 

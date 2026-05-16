@@ -15,6 +15,7 @@ The skills in this directory are real, working cron skills from the original Nol
 |---|---|
 | **audible-deals** | Daily Python-script-driven cron that emails a digest. Pattern: script + email + dedup-via-state-file. |
 | **morning-brief** | Daily multi-source aggregator (calendar + email + tasks + weather) → Telegram report. Pattern: gog calls + meeting-prep sub-agent nesting + Markdown report format. |
+| **meeting-prep** | Called by morning-brief. Pulls prior notes + email + company intel + optional CRM → writes a prep doc. Pattern: multi-source research → structured markdown output. |
 | **daily-recap** | End-of-day reconciliation pulling from many sources. Pattern: read many → synthesize → Telegram. |
 | **linkedin-post-tracking-inner** | Web scraping via inherited `claude-in-chrome` MCP. Pattern: read sheet → navigate web → extract metrics → write back to sheet. |
 | **linkedin-weekly-rollup-inner** | Same Chrome pattern + WoW comparison computation. |

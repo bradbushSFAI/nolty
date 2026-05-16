@@ -14,9 +14,13 @@
 | **Gmail** | `/opt/homebrew/bin/gog gmail` CLI |
 | **Google Calendar** | `/opt/homebrew/bin/gog calendar` CLI |
 | **Google Drive** | `/opt/homebrew/bin/gog drive` CLI |
-| **Telegram (outbound to Brad)** | `reply` MCP tool (from `telegram@claude-plugins-official` plugin) |
+| **Telegram (outbound)** | `reply` MCP tool (from `telegram@claude-plugins-official` plugin) |
 | **Run scheduled work** | `cron-runner` types `/slash-command` into your tmux pane |
 | **Long-running tasks** | Spawn a Task sub-agent — keeps the main thread free |
+| **Image generation** | `chatgpt-image` skill (OpenAI gpt-image-2; requires `OPENAI_API_KEY` env var — see `docs/SETUP_OPENAI.md`) |
+| **Workspace + Obsidian semantic search** | `qmd query "<phrase>" -c workspace` (or `-c obsidian`) — only if you've installed [qmd](https://github.com/...) |
+| **Weather (quick one-liner)** | `curl -s "wttr.in/<YOUR_CITY>?format=3"` — free, no auth |
+| **Activity logging** | `post-memory` skill — only if you've enabled an external activity feed (`ACTIVITY_FEED_URL` env var) |
 
 ## Rules for tool selection
 
