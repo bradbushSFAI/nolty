@@ -246,5 +246,3 @@ MIT — see [LICENSE](LICENSE). Copyright 2026 Brad Bush and Strategy For AI.
 We built Nolty because we needed an always-on agent that handled our own scheduling, content, and operations — and we wanted to share what worked.
 
 **If your firm wants to put AI to work in the same disciplined way, [strategyfor.ai](https://www.strategyfor.ai) is where to start.**
-
-Reach out: [brad@strategyfor.ai](mailto:brad@strategyfor.ai)
