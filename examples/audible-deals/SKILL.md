@@ -20,17 +20,29 @@ pip install audible-deals
 deals --help    # should print usage
 ```
 
-Configure your scan profiles (taste filters) — see audible-deals docs. The skill below assumes profiles named `your-genre-1`, `your-genre-2`, etc.
+Authenticate + save your taste profiles:
+
+```bash
+deals auth login
+deals profile save <profile-name> --max-price 8 --min-rating 3.5 --min-ratings 20 --skip-owned --sort price-per-hour --deep
+# repeat for each genre / interest you want to scan
+```
+
+See [audible-deals docs](https://github.com/chauduyphanvu/audible-deals) for the full set of flags.
+
+Then **edit `examples/audible-deals/scripts/scan_deals.py`** — there's a `CONFIG` block at the top with a `SECTIONS` list. Uncomment the example sections, replace with your real profile names, or define new sections (profile / category / keyword / narrator / series-gap scans).
 
 ## Procedure
 
 ### STEP 1 — Run the scan script
 
+The script lives at `examples/audible-deals/scripts/scan_deals.py` and ships in this repo.
+
 ```bash
 /usr/bin/python3 examples/audible-deals/scripts/scan_deals.py --output /tmp/audible-digest.md
 ```
 
-(Adapt the script path to your install location. The script wraps the `deals` CLI calls across your profiles.)
+(Adapt the path if you've moved the example into `skills/` for active use.)
 
 The scan can take several minutes — multiple Audible API calls. If the script exits non-zero or the digest file is empty, skip the email and notify the user (STEP 4).
 

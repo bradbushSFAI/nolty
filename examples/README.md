@@ -19,7 +19,6 @@ The skills in this directory are real, working cron skills from the original Nol
 | **linkedin-post-tracking-inner** | Web scraping via inherited `claude-in-chrome` MCP. Pattern: read sheet → navigate web → extract metrics → write back to sheet. |
 | **linkedin-weekly-rollup-inner** | Same Chrome pattern + WoW comparison computation. |
 | **linkedin-monthly-analysis** | Read-only monthly analytics from Google Sheet + Obsidian report write. |
-| **linkedin-publish-inner** | Chrome-driven scheduling via a third-party site's native UI. Manual-only (ban-avoidance). |
 | **content-hour** | Weekly interactive content planning. Pattern: file-walk + ranking + interactive draft + Telegram. The most complex example. |
 | **cc-usage-check** | tmux-in-tmux pattern: spawn a nested tmux to capture a TUI screen, parse output. |
 | **qmd-reindex** | Silent-on-success cron. Pattern: run a CLI tool, only telegram on failure. |

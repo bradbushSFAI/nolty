@@ -119,12 +119,6 @@ Depends on: same as post-tracking-inner.
 
 Depends on: gog, your Obsidian vault (optional).
 
-### [`examples/linkedin-publish-inner`](../examples/linkedin-publish-inner/SKILL.md)
-
-Manual-only Chrome-driven scheduler: pick approved drafts from Obsidian Planned/, schedule each via LinkedIn's native UI with bot-detection-safe pacing, move files to Published/.
-
-Depends on: claude-in-chrome, gog, an Obsidian Vault-style content folder.
-
 ### [`examples/content-hour`](../examples/content-hour/SKILL.md)
 
 Weekly interactive content planning: walk idea library, rank candidates, research news hooks, present picks via Telegram, draft each post collaboratively with the user, save to Planned/, write tracking row in sheet.

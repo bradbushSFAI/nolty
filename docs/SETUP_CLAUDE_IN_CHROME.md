@@ -55,7 +55,7 @@ Sites like LinkedIn have aggressive bot detection. Even though you're driving yo
 - Don't run high-frequency automation (every-minute scraping = bad)
 - Don't run during sleeping hours (3am LinkedIn scrape = bad)
 - Use semantic page navigation (`browser_snapshot` to find elements by label) rather than brittle CSS selectors
-- For posting/publishing, keep it manual (the `linkedin-publish-inner` example is explicitly NOT a cron)
+- For posting/publishing actions on third-party sites, keep it fully manual — don't automate it via cron
 
 The shipped examples follow these rules. If you write your own Chrome-driven cron, do the same.
 
