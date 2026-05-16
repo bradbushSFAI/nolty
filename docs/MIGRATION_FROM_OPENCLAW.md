@@ -28,6 +28,7 @@ If you're coming from OpenClaw (OC), here's how the concepts map.
 - **No GUI cron table.** OC had a TUI; Nolty edits JSON or talks to `cron-management` in natural language.
 - **No central activity feed.** OC's PostgreSQL logged everything; Nolty defaults to local logs. The `examples/post-memory/` skill shows how to plug in your own.
 - **Single user.** OC supported multiple human users sharing one daemon; Nolty v1 is single-user.
+- **Telegram only.** OC could fan out to multiple channels (iMessage, Discord, Slack, email). Nolty v1 supports Telegram only. The `reply` MCP tool from `telegram@claude-plugins-official` is hardcoded in skills; alt-channel support would need a small abstraction layer (post-v1 community work).
 - **macOS only (v1).** OC ran on Linux; Nolty's LaunchAgent is macOS-specific (Linux/Windows ports are post-v1 community work).
 
 ## Porting your existing OC setup
