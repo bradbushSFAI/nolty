@@ -13,6 +13,24 @@ Spawn a Haiku sub-agent if `[cron ...]` suffix present.
 
 Install [qmd](https://github.com/...) for local markdown vector search. Configure your collections in `~/.config/qmd/index.yml`.
 
+### Tell Nolty that qmd exists
+
+Reindexing the vector store is pointless if Nolty never queries it. Two edits make her reach for `qmd` when searching local files:
+
+**1. Add a row to your `TOOLS.md`:**
+
+```
+| **Workspace + Obsidian semantic search** | `qmd query "<phrase>" -c workspace` (or `-c obsidian`) — fast local vector search, indexed nightly by `/qmd-reindex` |
+```
+
+**2. Add a one-liner to your `AGENTS.md`** (in whatever section covers "when to use which search"):
+
+```
+- For natural-language search across your workspace or Obsidian notes, prefer `qmd query` over `Grep` — it's vector-based and finds conceptually related notes, not just keyword matches.
+```
+
+Without these references, Nolty defaults to `Grep` / `Read` and misses the value of qmd entirely. The reindex cron is the maintenance half; these doc updates are the usage half.
+
 ## Procedure
 
 ### STEP 1 — Update indices
