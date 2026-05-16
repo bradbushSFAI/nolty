@@ -71,7 +71,7 @@ pip3 install croniter
 # 3. Set up Telegram bot (see docs/SETUP_TELEGRAM.md)
 #    - Create bot with @BotFather
 #    - Get your chat_id from @userinfobot
-#    - Save token + chat_id to ~/.claude/channels/telegram/.env
+#    - Save token + chat_id to ~/.claude/channels/telegram/.env (or ask Claude to do it)
 
 # 4. Copy templates to live files
 cp USER.template.md USER.md
