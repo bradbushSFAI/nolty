@@ -84,7 +84,8 @@ cp HEARTBEAT.template.md HEARTBEAT.md
 cp AGENTS.template.md AGENTS.md
 cp cron-runner/cron-jobs.example.json cron-runner/cron-jobs.json
 
-# 5. Edit USER.md, MEMORY.md, cron-jobs.json with your specifics
+# 5. Edit USER.md, MEMORY.md, cron-jobs.json with your specifics (or ask
+#    Claude to help — paste your context, let her fill in the placeholders)
 
 # 6. Install the LaunchAgent (one-shot install script)
 ./scripts/install.sh
