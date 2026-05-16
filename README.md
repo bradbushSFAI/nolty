@@ -127,7 +127,7 @@ nolty/
 │   ├── com.example.cron-runner.plist.template
 │   ├── state/                 # gitignored runtime state
 │   └── logs/                  # gitignored runtime logs
-├── skills/                    # core skills (cron-management, heartbeat, nolty-mood)
+├── skills/                    # core skills (cron-management, heartbeat, nolty-mood, chatgpt-image)
 ├── examples/                  # 14 example skill patterns (Brad's originals, genericized)
 ├── .claude/
 │   ├── settings.json          # plugin DISABLED at parent scope
@@ -172,6 +172,7 @@ nolty/
 **Optional (per skill):**
 
 - **claude-in-chrome configured** — required only for skills that drive the browser (LinkedIn examples). Free; install the Chrome extension, sign into your accounts.
+- **OpenAI API key** — required only for image-generation skills (`chatgpt-image`, used by `nolty-mood`). See [`docs/SETUP_OPENAI.md`](docs/SETUP_OPENAI.md).
 - **qmd** — local markdown vector search; only the `qmd-reindex` example needs it
 - **`audible-deals`** Python package — only the `audible-deals` example needs it
 - **Perplexity MCP** — only the `home-loan-rate` example needs it
@@ -201,6 +202,7 @@ A Linux port is ~1 day of work for a contributor. See [`docs/PORTING.md`](docs/P
 - **[Setup: LaunchAgent](docs/SETUP_LAUNCHAGENT.md)** — install the cron-runner plist with boot persistence
 - **[Setup: gog](docs/SETUP_GOG.md)** — install + auth the Gmail/Calendar/Sheets CLI
 - **[Setup: claude-in-chrome](docs/SETUP_CLAUDE_IN_CHROME.md)** — configure the Chrome extension for web-driven crons
+- **[Setup: OpenAI API key](docs/SETUP_OPENAI.md)** — for image-generation skills (`chatgpt-image`, `nolty-mood`)
 - **[Recovery](docs/RECOVERY.md)** — the `/nolty-restart` playbook + manual recovery
 - **[Skill reference](docs/SKILL_REFERENCE.md)** — what each shipped skill does, what it depends on
 - **[Customizing Nolty](docs/CUSTOMIZING_NOLTY.md)** — swap the persona, change the brand
