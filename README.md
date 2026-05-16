@@ -73,7 +73,8 @@ pip3 install croniter
 #    - Get your chat_id from @userinfobot
 #    - Save token + chat_id to ~/.claude/channels/telegram/.env (or ask Claude to do it)
 
-# 4. Copy templates to live files
+# 4. Copy templates to live files (or ask Claude to integrate your OpenClaw
+#    or other agent files into these files as they are copied over)
 cp USER.template.md USER.md
 cp MEMORY.template.md MEMORY.md
 cp IDENTITY.template.md IDENTITY.md
