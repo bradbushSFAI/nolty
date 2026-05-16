@@ -2,6 +2,19 @@
 
 Thanks for thinking about contributing. This is an early project; rough edges are expected. The goal: a clean, well-tested kit anyone can use to migrate from OpenClaw to Claude Code.
 
+## Looking for a long-term maintainer 🦀
+
+**I'd love to hand this project off.** I built Nolty to solve my own problem and to share what worked, but I don't want to own it long-term. If you're using it actively, find it valuable, and want to take stewardship — please reach out via an issue. I'm happy to:
+
+- Transfer the repo to your GitHub account (or an org)
+- Help orient you on the architecture and design decisions
+- Stay on as a contributor / reviewer for a transition period
+- Hand over the `v0.1.0` baseline with a clean ownership transfer
+
+What I'd look for in a maintainer: someone who's actually shipped a Nolty install, understands the codebase well enough to triage issues, and wants the project to grow (Linux port, alt channels, more example skills). No specific affiliation or background required.
+
+Open an issue titled "Maintainer takeover proposal" with a few sentences about your usage and what you'd want to do with the project. Let's talk.
+
 ## What I'd love help with
 
 In rough priority order:
