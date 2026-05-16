@@ -1,0 +1,42 @@
+# Personal files — never commit
+USER.private.md
+MEMORY.private.md
+IDENTITY.private.md
+SOUL.private.md
+TOOLS.private.md
+HEARTBEAT.private.md
+AGENTS.private.md
+*.private.md
+
+# Daily memory logs are personal
+memory/*.md
+!memory/.gitkeep
+
+# Runtime state and logs
+cron-runner/state/*.json
+!cron-runner/state/.gitkeep
+cron-runner/logs/*
+!cron-runner/logs/.gitkeep
+
+# Active cron schedule (user-specific)
+cron-runner/cron-jobs.json
+
+# Local settings (per-machine)
+.claude/settings.local.json
+TelegramConfig/.claude/settings.local.json
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Editor
+.vscode/
+.idea/
+
+# Backups
+*Backup*.zip
+*backup*.zip

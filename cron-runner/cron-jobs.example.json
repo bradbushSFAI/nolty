@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "description": "Source of truth for Nolty's scheduled crons. Copy this file to cron-jobs.json (gitignored) and edit. The cron-runner LaunchAgent wakes every 15 min and dispatches due jobs into Nolty's tmux session as Task sub-agents.",
+  "tz_default": "America/Chicago",
+  "jobs": [
+    {
+      "id": "heartbeat",
+      "name": "Heartbeat",
+      "description": "Every 30 min — Nolty checks in: scans urgent email, upcoming meetings, version drift. Self-heals if CC auto-upgraded.",
+      "schedule": "*/30 * * * *",
+      "tz": "America/Chicago",
+      "slash_command": "/heartbeat",
+      "model": "sonnet",
+      "effort_level": "medium",
+      "category": "ops",
+      "max_lag_minutes": 20,
+      "enabled": true,
+      "created_at": "2026-05-16T00:00:00-05:00",
+      "notes": "High frequency. max_lag tight so we don't fire stale heartbeats after sleep. The skill itself gates quiet hours."
+    },
+    {
+      "id": "daily-summary",
+      "name": "Daily Summary",
+      "description": "Daily 9pm — recap of what happened today, what's open, what's next. Customize this skill to your workflow.",
+      "schedule": "0 21 * * *",
+      "tz": "America/Chicago",
+      "slash_command": "/daily-summary",
+      "model": "sonnet",
+      "effort_level": "medium",
+      "category": "info",
+      "max_lag_minutes": 60,
+      "enabled": false,
+      "created_at": "2026-05-16T00:00:00-05:00",
+      "notes": "Example. You'll need to write the /daily-summary skill yourself (or copy examples/daily-recap as a starting point)."
+    },
+    {
+      "id": "weekly-rollup",
+      "name": "Weekly Rollup",
+      "description": "Monday 8am — kick off the week. Customize to your needs.",
+      "schedule": "0 8 * * 1",
+      "tz": "America/Chicago",
+      "slash_command": "/weekly-rollup",
+      "model": "sonnet",
+      "effort_level": "medium",
+      "category": "info",
+      "max_lag_minutes": 1440,
+      "enabled": false,
+      "created_at": "2026-05-16T00:00:00-05:00",
+      "notes": "Example placeholder. Write your own /weekly-rollup skill or repurpose one from examples/."
+    }
+  ]
+}

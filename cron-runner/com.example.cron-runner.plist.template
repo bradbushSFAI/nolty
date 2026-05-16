@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Nolty cron-runner LaunchAgent
+
+  Setup:
+    1. Replace "com.example" everywhere with your reverse-DNS (e.g. "com.yourname")
+    2. Replace "/Users/YOUR_USER/" everywhere with your real home path
+    3. Replace the python3 path if needed (verify with `which python3.11`)
+    4. Copy to ~/Library/LaunchAgents/<label>.plist (symlink works too)
+    5. launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/<label>.plist
+
+  See docs/SETUP_LAUNCHAGENT.md for the full walkthrough.
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.example.cron-runner</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Library/Frameworks/Python.framework/Versions/3.11/bin/python3</string>
+        <string>/Users/YOUR_USER/Documents/CodingProjects/nolty/cron-runner/bin/cron-runner.py</string>
+        <string>run</string>
+    </array>
+    <key>StartInterval</key>
+    <integer>900</integer>
+    <key>RunAtLoad</key>
+    <false/>
+    <key>StandardOutPath</key>
+    <string>/Users/YOUR_USER/Documents/CodingProjects/nolty/cron-runner/logs/launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/YOUR_USER/Documents/CodingProjects/nolty/cron-runner/logs/launchd.err.log</string>
+    <key>WorkingDirectory</key>
+    <string>/Users/YOUR_USER/Documents/CodingProjects/nolty/cron-runner</string>
+</dict>
+</plist>

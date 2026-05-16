@@ -1,0 +1,6 @@
+{
+  "$comment": "Subfolder settings — Telegram plugin ENABLED here. The clawd-restart.sh script CDs into this folder before launching claude, so the plugin loads from this scope. Open the parent folder in VS Code without spawning a duplicate listener.",
+  "enabledPlugins": {
+    "telegram@claude-plugins-official": true
+  }
+}
