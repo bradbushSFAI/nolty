@@ -46,7 +46,7 @@ Edit `SOUL.md`:
 - **`CLAUDE.md`'s "Cron Dispatch Routing" section.** The cron-runner depends on this rule to keep the main thread responsive.
 - **`heartbeat/SKILL.md`'s STEP 0.5** version-drift check. This is the autonomous self-heal — disabling it means the system silently dies on CC auto-upgrade.
 - **`/nolty-restart`'s component checks.** They mirror the actual install — if you simplify them, recovery can miss real failures.
-- **The TelegramConfig subfolder pattern.** Without it, opening the repo in VS Code spawns a duplicate listener.
+- **The TelegramConfig subfolder pattern.** Without it, opening the repo in an IDE spawns a duplicate listener.
 
 ## Rebranding for a team / company
 

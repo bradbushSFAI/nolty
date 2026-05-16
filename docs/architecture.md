@@ -100,10 +100,10 @@ A native crontab can't easily do those things.
 
 The Telegram plugin loads from `.claude/settings.json` in the **workspace root only** — Claude Code doesn't walk up the directory tree. So:
 
-- If `nolty/.claude/settings.json` has plugin enabled, opening `nolty/` in VS Code spawns a Telegram listener inside VS Code → two listeners → conflict.
+- If `nolty/.claude/settings.json` has plugin enabled, opening `nolty/` in an IDE spawns a Telegram listener inside that IDE's Claude Code session → two listeners → conflict.
 - If `nolty/.claude/settings.json` has plugin disabled and `nolty/TelegramConfig/.claude/settings.json` has plugin enabled, the listener only spawns when something explicitly runs from `TelegramConfig/`.
 
-The `clawd-restart.sh` script `cd`s into `TelegramConfig/` before launching claude, so the always-on session loads the plugin. The user can open `nolty/` in VS Code without double-listening.
+The `clawd-restart.sh` script `cd`s into `TelegramConfig/` before launching claude, so the always-on session loads the plugin. The user can open `nolty/` in an IDE without double-listening.
 
 ## File responsibilities at a glance
 

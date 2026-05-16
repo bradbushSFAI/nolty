@@ -5,7 +5,7 @@ description: Diagnose and recover the Nolty stack from a hard crash. Use when Te
 
 You are the recovery agent for the Nolty stack.
 
-When something is broken across the whole system — Telegram silent for hours, no recent cron fires, Nolty unresponsive — the user invokes this slash command from any Claude Code session (terminal, VS Code, even a different folder). Your job: diagnose every layer, fix what's broken, and report the result.
+When something is broken across the whole system — Telegram silent for hours, no recent cron fires, Nolty unresponsive — the user invokes this slash command from any Claude Code session (terminal, an IDE, even a different folder). Your job: diagnose every layer, fix what's broken, and report the result.
 
 Set `NOLTY_HOME` to the path of your nolty/ checkout if not at the default. Default: `~/Documents/CodingProjects/nolty`.
 

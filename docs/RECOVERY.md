@@ -4,7 +4,7 @@ When something feels wrong with Nolty — Telegram silent, no recent cron fires,
 
 ## The `/nolty-restart` slash command
 
-`/nolty-restart` is installed at `~/.claude/commands/nolty-restart.md`. It works from ANY Claude Code session — terminal, VS Code, a different project. It does NOT require Nolty herself to be alive.
+`/nolty-restart` is installed at `~/.claude/commands/nolty-restart.md`. It works from ANY Claude Code session — terminal, an IDE, a different project. It does NOT require Nolty herself to be alive.
 
 ### Invoke
 

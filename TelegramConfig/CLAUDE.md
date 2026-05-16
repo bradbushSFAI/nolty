@@ -5,7 +5,7 @@ This subfolder exists ONLY to scope the Telegram plugin to this directory.
 Claude Code reads `.claude/settings.json` from the workspace root only — it doesn't walk up. By putting the Telegram-enabled settings in `TelegramConfig/.claude/settings.json` and the parent `nolty/.claude/settings.json` set to plugin-disabled, you can:
 
 - Run Nolty from `TelegramConfig/` → Telegram plugin loads
-- Open the parent `nolty/` in VS Code → no duplicate Telegram listener spawned
+- Open the parent `nolty/` in an IDE → no duplicate Telegram listener spawned
 
 The `clawd-restart.sh` script CDs into this directory before launching `claude`.
 

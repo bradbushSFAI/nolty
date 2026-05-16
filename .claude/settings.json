@@ -1,5 +1,5 @@
 {
-  "$comment": "Parent folder settings — Telegram plugin DISABLED here so you can open this folder in VS Code without spawning a duplicate listener. The TelegramConfig/ subfolder is the one with plugin enabled — see TelegramConfig/.claude/settings.json.",
+  "$comment": "Parent folder settings — Telegram plugin DISABLED here so you can open this folder in an IDE without spawning a duplicate listener. The TelegramConfig/ subfolder is the one with plugin enabled — see TelegramConfig/.claude/settings.json.",
   "enabledPlugins": {
     "telegram@claude-plugins-official": false
   }
